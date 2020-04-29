@@ -31,7 +31,7 @@ public final class MoltenFirebird extends CardImpl {
         // Flying
         this.addAbility(FlyingAbility.getInstance());
 
-        // When Molten Firebird dies, return it to the battlefield under its owner’s control at the beginning of the next end step and you skip your next draw step.
+        // When Molten Firebird dies, return it to the battlefield under its owner’s control at the beginning of the next end step. You skip your next draw step.
         Ability ability = new DiesTriggeredAbility(new CreateDelayedTriggeredAbilityEffect(
                 new AtTheBeginOfNextEndStepDelayedTriggeredAbility(new ReturnSourceFromGraveyardToBattlefieldEffect())));
         ability.addEffect(new SkipNextDrawStepControllerEffect());
